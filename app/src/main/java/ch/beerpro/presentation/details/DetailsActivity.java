@@ -163,7 +163,7 @@ public class DetailsActivity extends AppCompatActivity implements OnRatingLikedL
         // addRatingExplanation.setVisibility(View.GONE);
     }
 
-    public void onAddRatingClicked(View view) {
+    public void onAddRatingClickedListener(View view) {
         Intent intent = new Intent(this, CreateRatingActivity.class);
         intent.putExtra(CreateRatingActivity.ITEM, model.getBeer().getValue());
         ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this, addRatingBar, "rating");

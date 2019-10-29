@@ -78,7 +78,7 @@
             android:layout_weight="1"
             android:drawableTop="@drawable/ic_star_black_24dp"
             android:drawableTint="@android:color/darker_gray"
-            android:onClick="onAddRatingClicked"
+            android:onClick="onAddRatingClickedListener"
             android:text="Bewertung hinzufügen"
             android:textColor="@android:color/darker_gray"
             android:textSize="10sp" />
