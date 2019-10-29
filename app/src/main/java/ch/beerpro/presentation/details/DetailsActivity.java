@@ -198,6 +198,18 @@ public class DetailsActivity extends AppCompatActivity implements OnRatingLikedL
         }
     }
 
+    public void onShareClickedListener(View view) {
+        Beer beer = model.getBeer().getValue();
+
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, "Gönn' dir ein " + beer.getName() + " von " + beer.getManufacturer() + ".\nDie BeerPro Community bewertet es mit durchschnittlich " + beer.getAvgRating() + " Sternen (" + beer.getNumRatings() + " Bewertungen).");
+        sendIntent.setType("text/plain");
+
+        Intent shareIntent = Intent.createChooser(sendIntent, null);
+        startActivity(shareIntent);
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
