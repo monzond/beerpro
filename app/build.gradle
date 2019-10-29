@@ -7,7 +7,7 @@ android {
     }
     defaultConfig {
         applicationId "ch.beerpro"
-        minSdkVersion 21
+        minSdkVersion 24
         targetSdkVersion 28
         versionCode 10
         versionName "Beta 1.0"
