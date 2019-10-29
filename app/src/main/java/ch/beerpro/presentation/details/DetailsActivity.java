@@ -146,6 +146,13 @@ public class DetailsActivity extends AppCompatActivity implements OnRatingLikedL
         adapter.submitList(new ArrayList<>(ratings));
     }
 
+    public void onAddRatingClicked(View view) {
+        Intent intent = new Intent(this, CreateRatingActivity.class);
+        intent.putExtra(CreateRatingActivity.ITEM, model.getBeer().getValue());
+        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this, addRatingBar, "rating");
+        startActivity(intent, options.toBundle());
+    }
+
     @Override
     public void onRatingLikedListener(Rating rating) {
         model.toggleLike(rating);

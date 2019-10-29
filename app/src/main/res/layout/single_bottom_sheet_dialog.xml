@@ -71,14 +71,15 @@
             android:background="#ffeeeeee" />
 
         <Button
-            android:id="@+id/addPrivateNote"
+            android:id="@+id/addRating"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:drawableTop="@drawable/ic_create_black_24dp"
+            android:drawableTop="@drawable/ic_star_black_24dp"
             android:drawableTint="@android:color/darker_gray"
-            android:text="Private Notiz hinzufügen"
+            android:onClick="onAddRatingClicked"
+            android:text="Bewertung hinzufügen"
             android:textColor="@android:color/darker_gray"
             android:textSize="10sp" />
 
