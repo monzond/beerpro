@@ -44,7 +44,8 @@
                     app:cardCornerRadius="8dp"
                     app:cardElevation="5dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="@color/colorPrimaryLight">
 
                     <ImageView
                         android:id="@+id/photo"
@@ -60,11 +61,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="192dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="@color/colorPrimaryLight">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimaryLight">
 
 
                         <TextView
@@ -262,14 +265,16 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryLight">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:background="@color/colorPrimaryLight">
 
                     <TextView
                         android:id="@+id/textView6"

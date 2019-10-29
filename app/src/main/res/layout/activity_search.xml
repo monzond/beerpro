@@ -40,14 +40,16 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center_vertical">
+                    android:gravity="center_vertical"
+                    android:background="@color/colorPrimaryLight">
 
                     <ImageView
                         android:id="@+id/searchImageView"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="8dp"
-                        app:srcCompat="@drawable/ic_search_black_24dp" />
+                        app:srcCompat="@drawable/ic_search_black_24dp"
+                        android:tint="@color/colorAccent"/>
 
                     <EditText
                         android:id="@+id/searchEditText"
@@ -67,8 +69,8 @@
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:padding="8dp"
-                        android:tint="?attr/colorAccent"
-                        app:srcCompat="@drawable/ic_close_white_24px" />
+                        app:srcCompat="@drawable/ic_close_white_24px"
+                        android:tint="@color/colorAccent" />
                 </RelativeLayout>
 
             </androidx.cardview.widget.CardView>

@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/selectable_item_background_white"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:backgroundTint="@color/colorPrimaryLight">
 
 
     <ImageView
@@ -16,7 +17,8 @@
         android:layout_marginEnd="@dimen/text_margin"
         android:layout_marginRight="@dimen/text_margin"
         android:layout_marginBottom="8dp"
-        app:srcCompat="@drawable/ic_search_black_24dp" />
+        app:srcCompat="@drawable/ic_search_black_24dp"
+        android:tint="@color/colorAccent"/>
 
     <TextView
         android:id="@+id/content"

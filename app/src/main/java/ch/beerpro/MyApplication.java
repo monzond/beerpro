@@ -2,6 +2,9 @@ package ch.beerpro;
 
 import android.app.Application;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+
 import com.google.firebase.firestore.FirebaseFirestore;
 
 /**

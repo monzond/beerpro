@@ -3,6 +3,7 @@
     <string name="title_activity_home_screen">Beer Pro</string>
     <string name="action_settings">Einstellungen</string>
     <string name="action_logout">Abmelden</string>
+    <string name="action_theme">Theme ändern</string>
     <string name="todo">TODO</string>
     <string name="fmt_num_ratings">Gefällt %d</string>
     <string name="fmt_avg_rating">%.1f</string>

@@ -1,6 +1,6 @@
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -13,7 +13,6 @@
         <item name="android:windowSharedElementEnterTransition">@transition/change_view_transform</item>
         <item name="android:windowSharedElementExitTransition">@transition/change_view_transform</item>
     </style>
-
 
     <style name="DetailsPageTheme" parent="AppTheme">
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
@@ -51,19 +50,23 @@
         <item name="colorControlActivated">@color/colorPrimary</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:itemBackground">@color/colorPrimaryLight</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <dimen name="title_margin_start">24dp</dimen>
 
     <style name="AppTabLayout" parent="Widget.Design.TabLayout">
-        <item name="tabIndicatorColor">?attr/colorAccent</item>
+        <item name="tabIndicatorColor">@color/colorAccent</item>
         <item name="tabMaxWidth">256dp</item>
         <item name="tabIndicatorGravity">bottom</item>
         <item name="tabIndicatorHeight">4dp</item>
         <item name="tabPaddingStart">6dp</item>
         <item name="tabPaddingEnd">6dp</item>
+        <item name="tabIconTint">@color/colorAccent</item>
         <!--<item name="android:layout_marginLeft">64dp</item>
         <item name="android:layout_marginRight">64dp</item>-->
     </style>

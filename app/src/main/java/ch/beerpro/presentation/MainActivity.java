@@ -1,12 +1,16 @@
 package ch.beerpro.presentation;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 
@@ -67,6 +71,15 @@ public class MainActivity extends AppCompatActivity
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(view -> Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show());
+
+        SharedPreferences settings = getSharedPreferences("NightMode", MODE_PRIVATE);
+        if (settings.getInt("state", 0) < 1) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        } else {
+            AppCompatDelegate.setDefaultNightMode(settings.getInt("state", 0));
+        }
+
+        //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
     }
 
     private void setupViewPager(ViewPager viewPager, TabLayout tabLayout) {
@@ -113,10 +126,27 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        SharedPreferences settings = getSharedPreferences("NightMode", MODE_PRIVATE);
+        SharedPreferences.Editor edit = settings.edit();
         switch (item.getItemId()) {
             case R.id.action_logout:
                 logout();
                 return true;
+            case R.id.action_theme:
+                switch (AppCompatDelegate.getDefaultNightMode()) {
+                    case 1:
+                        edit.putInt("state", 2);
+                        edit.commit();
+                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                        return true;
+                    case 2:
+                        edit.putInt("state", 1);
+                        edit.commit();
+                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                        return true;
+                    default:
+                        return false;
+                }
             default:
                 return super.onOptionsItemSelected(item);
         }

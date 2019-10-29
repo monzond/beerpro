@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="8dp">
+    android:layout_marginBottom="8dp"
+    android:background="@color/colorPrimaryLight">
 
         <TextView
             android:id="@+id/comment"
@@ -88,7 +89,8 @@
             android:tint="@android:color/darker_gray"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/numLikes"
-            app:srcCompat="@drawable/ic_thumb_up_black_24dp" />
+            app:srcCompat="@drawable/ic_thumb_up_black_24dp"
+            android:backgroundTint="@color/colorPrimaryLight"/>
 
         <ImageView
             android:id="@+id/photo"
