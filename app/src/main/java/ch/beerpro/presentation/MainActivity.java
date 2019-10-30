@@ -78,8 +78,6 @@ public class MainActivity extends AppCompatActivity
         } else {
             AppCompatDelegate.setDefaultNightMode(settings.getInt("state", 0));
         }
-
-        //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
     }
 
     private void setupViewPager(ViewPager viewPager, TabLayout tabLayout) {
