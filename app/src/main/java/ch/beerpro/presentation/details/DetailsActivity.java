@@ -150,17 +150,21 @@ public class DetailsActivity extends AppCompatActivity implements OnRatingLikedL
     private void updateRatings(List<Rating> ratings) {
         adapter.submitList(new ArrayList<>(ratings));
         // TODO in detailsviewmodel auslagern
-        float myRating = model.getRatings().getValue().stream().filter(u -> u.getUserId().equals(model.getCurrentUser().getUid())).findFirst().get().getRating();
+        try {
+            float myRating = model.getRatings().getValue().stream().filter(u -> u.getUserId().equals(model.getCurrentUser().getUid())).findFirst().get().getRating();
 
-        // stops listener from changing to rating activity
-        addRatingBar.setOnRatingBarChangeListener(null);
-        addRatingBar.setRating(myRating);
-        // makes it read-only
-        addRatingBar.setIsIndicator(true);
+            // stops listener from changing to rating activity
+            addRatingBar.setOnRatingBarChangeListener(null);
+            addRatingBar.setRating(myRating);
+            // makes it read-only
+            addRatingBar.setIsIndicator(true);
 
-        addRatingExplanation.setText("Deine letzte Beurteilung");
-        // alternative if the textview below rating should be hidden if there already is a rating
-        // addRatingExplanation.setVisibility(View.GONE);
+            addRatingExplanation.setText("Deine letzte Beurteilung");
+            // alternative if the textview below rating should be hidden if there already is a rating
+            // addRatingExplanation.setVisibility(View.GONE);
+        } catch (Exception e) {
+            
+        }
     }
 
     public void onAddRatingClickedListener(View view) {
