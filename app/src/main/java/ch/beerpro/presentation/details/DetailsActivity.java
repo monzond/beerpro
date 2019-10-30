@@ -205,8 +205,7 @@ public class DetailsActivity extends AppCompatActivity implements OnRatingLikedL
         sendIntent.setAction(Intent.ACTION_SEND);
         sendIntent.putExtra(Intent.EXTRA_TEXT, "Gönn' dir ein " + beer.getName() + " von " + beer.getManufacturer() + ".\nDie BeerPro Community bewertet es mit durchschnittlich " + beer.getAvgRating() + " Sternen (" + beer.getNumRatings() + " Bewertungen).");
         sendIntent.setType("text/plain");
-
-        Intent shareIntent = Intent.createChooser(sendIntent, null);
+        Intent shareIntent = Intent.createChooser(sendIntent, "Teile " + beer.getName() + " via");
         startActivity(shareIntent);
     }
 
